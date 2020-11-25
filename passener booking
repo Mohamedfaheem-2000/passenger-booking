@@ -1,0 +1,31 @@
+Queue = []
+def add_passenger1(num):
+    Queue_temp = []
+    for i in range(0,num):
+        Passenger_details = input("Enter the Name,Age and destination")
+        temp = Passenger_details.split()
+        Queue.append(temp)
+    
+    return Queue
+​
+def Sort(Queue):
+    from operator import itemgetter
+    Queue = sorted(Queue, key=itemgetter(1))
+    return Queue
+Queue = add_passenger1(4)
+Enter the Name,Age and destination Jamal 26 A
+Enter the Name,Age and destination Ismail 30 A
+Enter the Name,Age and destination fahim 20 B
+Enter the Name,Age and destination Fariza 45 A
+Queue = Sort(Queue)
+def start_pod(num):
+    for i in range(0,num):
+        
+        print(Queue[-1])
+        Queue.pop()
+        
+        
+            
+            
+1
+start_pod(1)
